@@ -9,9 +9,10 @@
 **_devtool:_** source-map 생성 여부를 설정.
 
 > 종류에 따라 번들링 속도가 다르므로 development, production에 따라 다르게 설정헌다.
-> development: cheap-module-eval-source-map, inline-source-map, eval-souce-map
 > <br/>
-> production: cheap-module-source-map
+> **_development:_** cheap-module-eval-source-map, inline-source-map, eval-souce-map
+> <br/>
+> **_production:_** cheap-module-source-map
 
 &nbsp;
 
@@ -37,10 +38,10 @@
 **_module:_** 확장자에 따른 세부 설정. 이곳에 loader를 설정한다.
 
 > 리액트에서 아래의 loader는 필수로 설정한다. <br/>
-> babel-loader: ES6 이상의 문법을 변환해준다.<br/>
-> html-loader: html을 합쳐준다. <br/>
-> css-loader, sass-loader: css, scss 스타일 파일을 합쳐준다. <br/>
-> file-loader, url-loader: static file들을 output 경로에 복사하거나 문자열로 변환해준다. <br/>
+> **_babel-loader:_** ES6 이상의 문법을 변환해준다.<br/>
+> **_html-loader:_** html을 합쳐준다. <br/>
+> **_css-loader, sass-loader_**: css, scss 스타일 파일을 합쳐준다. <br/>
+> **_file-loader, url-loader_**: static file들을 output 경로에 복사하거나 문자열로 변환해준다. <br/>
 
 &nbsp;
 
@@ -87,12 +88,8 @@ devServer를 설정하여 번들 파일 생성없이 지정한 포트로 실행�
 
 &nbsp;
 
-**_contentBase:_** output 경로를 적어줌. 이 경로에서 실행할 파일을 찾음.
-
-**_index:_** 해당 경로에서 실행할 파일
-
-**_port:_** 실행할 포트
-
-**_historyApiFallback:_** 새로고침 시에도 해당 경로에 해당하는 페이지를 불러오도록 해줌.
-
-**_proxy:_** API 요청을 위한 설정
+**_contentBase:_** output 경로를 적어줌. 이 경로에서 실행할 파일을 찾음. <br/>
+**_index:_** 해당 경로에서 실행할 파일 <br/>
+**_port:_** 실행할 포트 <br/>
+**_historyApiFallback:_** 새로고침 시에도 해당 경로에 해당하는 페이지를 불러오도록 해줌.<br/>
+**_proxy:_** API 요청을 위한 설정 <br/>
