@@ -1,0 +1,49 @@
+{
+    "name": "server",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "devDependencies": {
+        "@babel/cli": "^7.7.4",
+        "@babel/core": "^7.7.4",
+        "@babel/node": "^7.7.4",
+        "@babel/polyfill": "^7.7.0",
+        "@babel/preset-env": "^7.7.4",
+        "@babel/register": "^7.7.4",
+        "@types/express": "^4.17.2",
+        "babel-loader": "^8.0.6",
+        "chai": "^4.2.0",
+        "cli-color": "^2.0.0",
+        "dotenv": "^8.2.0",
+        "eslint": "^6.7.2",
+        "eslint-config-airbnb-base": "^14.0.0",
+        "eslint-config-prettier": "^6.7.0",
+        "eslint-plugin-import": "^2.18.2",
+        "eslint-plugin-prettier": "^3.1.1",
+        "hard-source-webpack-plugin": "^0.13.1",
+        "mocha": "^6.2.2",
+        "mockgoose": "^8.0.4",
+        "nodemon": "^2.0.1",
+        "prettier": "^1.19.1",
+        "supertest": "^4.0.2",
+        "webpack": "^4.41.2",
+        "webpack-bundle-analyzer": "^3.6.0",
+        "webpack-cli": "^3.3.10",
+        "webpack-node-externals": "^1.7.2"
+    },
+    "scripts": {
+        "start": "NODE_PATH=src NODE_ENV=development nodemon --watch src/ src/server.js --exec babel-node",
+        "build": "webpack --config ./config/webpack.dev.js",
+        "test": "env NODE_ENV=test NODE_PATH=$NODE_PATH:$PWD/src mocha --timeout 30000 --require @babel/register $(find src/api/ -name *.test.js) --exit"
+    },
+    "dependencies": {
+        "express": "^4.17.1",
+        "helmet": "^3.21.2",
+        "mongoose": "^5.7.13"
+    },
+    "babel": {
+        "presets": [
+            "@babel/preset-env"
+        ]
+    }
+}
