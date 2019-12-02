@@ -8,10 +8,8 @@
 
 **_devtool:_** source-map 생성 여부를 설정.
 
-> 종류에 따라 번들링 속도가 다르므로 development, production에 따라 다르게 설정헌다.
-> <br/>
-> **_development:_** cheap-module-eval-source-map, inline-source-map, eval-souce-map
-> <br/>
+> 종류에 따라 번들링 속도가 다르므로 development, production에 따라 다르게 설정헌다. <br />
+> **_development:_** cheap-module-eval-source-map, inline-source-map, eval-souce-map <br />
 > **_production:_** cheap-module-source-map
 
 &nbsp;
@@ -37,11 +35,7 @@
 
 **_module:_** 확장자에 따른 세부 설정. 이곳에 loader를 설정한다.
 
-> 리액트에서 아래의 loader는 필수로 설정한다. <br/>
-> **_babel-loader:_** ES6 이상의 문법을 변환해준다.<br/>
-> **_html-loader:_** html을 합쳐준다. <br/>
-> **_css-loader, sass-loader_**: css, scss 스타일 파일을 합쳐준다. <br/>
-> **_file-loader, url-loader_**: static file들을 output 경로에 복사하거나 문자열로 변환해준다. <br/>
+> 리액트에서 아래의 loader는 필수로 설정한다. <br/> > **_babel-loader:_** ES6 이상의 문법을 변환해준다.<br/> > **_html-loader:_** html을 합쳐준다. <br/> > **_css-loader, sass-loader_**: css, scss 스타일 파일을 합쳐준다. <br/> > **_file-loader, url-loader_**: static file들을 output 경로에 복사하거나 문자열로 변환해준다. <br/>
 
 &nbsp;
 

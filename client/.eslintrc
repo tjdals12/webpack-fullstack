@@ -1,9 +1,15 @@
 {
     "parser": "babel-eslint",
     "extends": ["airbnb", "prettier"],
-    "rules": {},
+    "rules": {
+        "react/jsx-indent": [2, 4],
+        "react/jsx-indent-props": [2, 4],
+        "import/no-extraneous-dependencies": 0,
+        "import/no-unresolved": 0
+    },
     "env": {
         "browser": true,
         "jest": true
-    }
+    },
+    "ignorePatterns": ["dist", "config", "README.md"]
 }
