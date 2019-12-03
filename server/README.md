@@ -113,7 +113,9 @@ winston 사용, morgan도 있지만 커스터마이징 측면에선 winston이 �
 
 windoston.format.combine 을 통해서 커스터마이징 할 수 있고 콘솔에 찍으려면 winston.format.printf를 마자막에 추가한다.
 
-**_더 다양한 옵션이 있겠지만 지금은 이 정도로도 충분한 것 같으므로 더 적지않고 필요한 경우 찾아보고 추가해야 겠다._**
+**_더 다양한 옵션이 있겠지만 지금은 이 정도로도 충분한 것 같으므로 더 적지않고 필요한 경우 찾아보고 추가 해야겠다._**
+
+[winston 공식문서](https://github.com/winstonjs/winston)
 
 &nbsp;
 
@@ -204,6 +206,12 @@ elasticsearch와도 연동할 수 있다고 해서 나중에 한번 해봐야 �
 express와 koa에서 각각 적용하는 방법이 다르다.
 
 스펙을 정의하는 부분은 동일하지만 필요한 패키지와 미들웨어를 적용하는 방법이 다르다. 그리고 koa는 기존엔 /swaager 를 라우트 주소로 사용할 수 있었는데 버전이 바뀌면서 되지 않는 것 같다. (몇 개월 전에 했던 개인 프로젝트에서는 /swagger를 적용하였다.) /swagger-api도 안된다.
+
+[swagger 공식문서](https://swagger.io/docs/specification/about/)
+
+[swagger-stats 공식문서](https://swaggerstats.io/)
+
+&nbsp;
 
 먼저 필요한 패키지를 설치한다.
 
