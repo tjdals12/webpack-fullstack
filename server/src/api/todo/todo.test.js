@@ -1,9 +1,9 @@
-import clc from 'cli-color';
-import { connect, close } from 'model';
-import app from 'app';
 import request from 'supertest';
 import { expect } from 'chai';
+import { connect, close } from 'model';
+import app from 'app';
 import config from 'config';
+import clc from 'cli-color';
 
 const { port } = config;
 

@@ -1,13 +1,14 @@
 import { connect } from 'model';
 import app from 'app';
 import config from 'config';
+import logger from 'logger';
 
-const { port } = config;
+const { port, appHost } = config;
 
 connect().then(type => {
-    console.log(`Connected ${type}`);
+    logger.info(`Connected ${type}`);
 
-    app.listen(port, () => {
-        console.log(`Server running at localhost:${port}`);
+    app.listen(port, appHost, () => {
+        logger.info(`Server running at localhost:${port}`);
     });
 });
