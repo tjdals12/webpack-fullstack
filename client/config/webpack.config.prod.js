@@ -21,7 +21,7 @@ module.exports = {
         new MiniCssExtractPlugin({ filename: 'style.css' }),
         new CleanWebpackPlugin(),
         new HardSourceWebpackPlugin(),
-        new BundleAnalyzerPlugin(),
+        new BundleAnalyzerPlugin({ analyzerMode: 'static' }),
     ],
     entry: {
         app: ['@babel/polyfill', paths.appIndexJs],

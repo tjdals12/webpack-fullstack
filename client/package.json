@@ -52,7 +52,7 @@
         "webpack-node-externals": "^1.7.2"
     },
     "scripts": {
-        "dev": "webpack-dev-server --config ./config/webpack.config.dev.js",
+        "start": "webpack-dev-server --config ./config/webpack.config.dev.js",
         "build": "webpack --config ./config/webpack.config.prod.js",
         "test": "jest --watch --no-cache"
     },

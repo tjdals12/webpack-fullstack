@@ -18,8 +18,10 @@ module.exports = {
     },
     plugins: [
         new HardSourceWebpackPlugin(),
-        new BundleAnalyzerPlugin(),
+        new BundleAnalyzerPlugin({ analyzerMode: "static" }),
         new EnvironmentPlugin({
+            APP_NAME: process.env.APP_NAME,
+            APP_HOST: process.env.APP_HOST,
             NODE_ENV: process.env.NODE_ENV,
             PORT: process.env.PORT,
             DB_URI: process.env.DB_URI,

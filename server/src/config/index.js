@@ -12,7 +12,9 @@ const configs = {
         dbUser: process.env.DB_USER,
         dbPass: process.env.DB_PASS,
     },
-    production: {},
+    production: {
+        dbUri: 'mongodb://mongo:27017/admin'
+    },
     development: {},
     test: {
         port: 4001,

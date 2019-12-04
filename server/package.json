@@ -39,7 +39,7 @@
     },
     "scripts": {
         "start": "NODE_PATH=src NODE_ENV=development nodemon --watch src/ src/server.js --exec babel-node",
-        "build": "webpack --config ./config/webpack.dev.js",
+        "build": "webpack --config ./config/webpack.config.js",
         "test": "env NODE_ENV=test NODE_PATH=$NODE_PATH:$PWD/src mocha --timeout 30000 --require @babel/register $(find src/api/ -name *.test.js) --exit"
     },
     "dependencies": {

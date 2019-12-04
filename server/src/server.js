@@ -3,12 +3,12 @@ import app from 'app';
 import config from 'config';
 import logger from 'logger';
 
-const { port, appHost } = config;
+const { port } = config;
 
 connect().then(type => {
     logger.info(`Connected ${type}`);
 
-    app.listen(port, appHost, () => {
+    app.listen(port, () => {
         logger.info(`Server running at localhost:${port}`);
     });
 });

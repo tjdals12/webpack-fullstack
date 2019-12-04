@@ -11,7 +11,7 @@
                 description: Successful Operatioin
             400:
                 description: Bad Request
-/todo/{id}:
+/todos/{id}:
     get:
         tags:
             - Todo

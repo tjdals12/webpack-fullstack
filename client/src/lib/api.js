@@ -1,3 +1,5 @@
 import axios from 'axios';
 
-export const getTodos = () => axios.get('/api/todos');
+const prefixPath = '/api/v1';
+
+export const getTodos = () => axios.get(`${prefixPath}/todos`);
