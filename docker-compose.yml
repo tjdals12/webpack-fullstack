@@ -1,0 +1,32 @@
+version: "3"
+services:
+  client:
+    container_name: client
+    build:
+      context: ./client
+    ports:
+      - 80:80
+    networks:
+      - backend
+  server:
+    container_name: server
+    build:
+      context: ./server
+    ports:
+      - 4000:4000
+    networks:
+      - backend
+  mongo:
+    container_name: mongo
+    image: mongo
+    ports:
+      - 27017:27017
+    networks:
+      - backend
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=todo
+      - MONGO_INITDB_ROOT_PASSWORD=1234
+
+networks:
+  backend:
+    driver: bridge
