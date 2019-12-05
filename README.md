@@ -31,7 +31,7 @@ dockerfile로 직접 이미지를 빌드하고 배포해야 한다.
 
 ```bash
     # 컨테이너들이 서로 통신할 수 있도록 같은 네트워크에 연결해야 한다.
-    $ docker network backend
+    $ docker network create backend
 
     # -t는 tag를 지정하는 옵션으로 나중에 지정한 태그명으로 실행할 수 있다.
     # Client에 있는 dockerfile로 client 이미지를 만든다.
@@ -49,7 +49,7 @@ dockerfile로 직접 이미지를 빌드하고 배포해야 한다.
 
     # NETWORK_ID에 생성한 backend의 NETWORK ID를 넣는다.
     # mongoDB
-    $ docker run -d -p 27017:27017 --network={NETWORK_ID} -e  MONGO_INITDB_ROOT_USERNAME=todo MONGO_INITDB_ROOT_PASSWORD=1234 --name mongo mongo
+    $ docker run -d -p 27017:27017 --network={NETWORK_ID} -e MONGO_INITDB_ROOT_USERNAME=todo MONGO_INITDB_ROOT_PASSWORD=1234 --name mongo mongo
 
     # server
     $ docker run -d -p 4000:4000 --network={NETWORK_ID} --name server webpack_server
